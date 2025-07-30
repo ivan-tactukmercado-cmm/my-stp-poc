@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" expressionLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="https://kie.org/dmn/_49CA0FB1-9FAA-4672-8A0B-A787EB65E52E" id="_55CBA535-7252-4E37-A674-472EFF00929E" name="DMN_AECB2F1F-A849-44F7-9A49-53EA0E27DB0B" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="https://kie.org/dmn/extensions/1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="https://kie.org/dmn/extensions/1.0" expressionLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="https://kie.org/dmn/_49CA0FB1-9FAA-4672-8A0B-A787EB65E52E" id="_55CBA535-7252-4E37-A674-472EFF00929E" name="DMN_AECB2F1F-A849-44F7-9A49-53EA0E27DB0B">
   <decision name="InterestRate" id="_790265D1-583D-4396-A6B6-D1A899358B51">
     <variable name="InterestRate" id="_0BEDC92A-16F4-48A1-A908-E25284DF4B13" typeRef="number" />
     <informationRequirement id="_19D79B0E-277F-4000-9DC7-738F1DBE180B">
@@ -23,13 +23,13 @@
       <annotation name="Annotations" />
       <rule id="_F0AF1466-1B40-4EB1-BC7A-11643F416F39">
         <inputEntry id="_ACF04E9C-5C6D-4EC3-BFA4-FAF1DE32498C">
-          <text>(600, 700)</text>
+          <text>[600..700)</text>
         </inputEntry>
         <inputEntry id="_ECF97819-85F5-49C6-B61F-3CC0024EC6C6">
-          <text>(600, 700)</text>
+          <text>[600..700)</text>
         </inputEntry>
         <outputEntry id="_2F40BD53-FD0C-4DC5-9037-28C92396CBC4">
-          <text></text>
+          <text>10</text>
         </outputEntry>
         <annotationEntry>
           <text>// Your annotations here</text>
@@ -37,13 +37,27 @@
       </rule>
       <rule id="_A6470694-BC95-4A1D-93A9-705436E6782D">
         <inputEntry id="_9E47D9C2-60A9-4B57-89B9-FF2B24E8EEC6">
-          <text>-</text>
+          <text>[700..800)</text>
         </inputEntry>
         <inputEntry id="_A6C93900-A207-4BE4-A9A0-7B6DB205AED3">
-          <text>-</text>
+          <text>[700..800)</text>
         </inputEntry>
         <outputEntry id="_2BDBF04E-2ED1-4B48-8BDC-63DCAC5AD16D">
+          <text>9</text>
+        </outputEntry>
+        <annotationEntry>
           <text></text>
+        </annotationEntry>
+      </rule>
+      <rule id="_AFF260B9-6336-4E4B-84FE-0374F4BF4C1E">
+        <inputEntry id="_088394CE-9933-4000-874A-3EAB290703F6">
+          <text>[800..850)</text>
+        </inputEntry>
+        <inputEntry id="_F97D2740-7A11-41E9-991A-0FC9B415A858">
+          <text>[800..850)</text>
+        </inputEntry>
+        <outputEntry id="_24F4F098-B35F-4822-AB29-22874ECE2C29">
+          <text>8</text>
         </outputEntry>
         <annotationEntry>
           <text></text>
