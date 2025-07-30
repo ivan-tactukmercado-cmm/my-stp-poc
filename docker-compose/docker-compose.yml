@@ -1,0 +1,9 @@
+services:
+
+  my-stp-poc:
+    container_name: my-stp-poc
+    image: dev.local/bamoe-apps/my-stp-poc:1.0.0-SNAPSHOT
+    ports:
+      - "8080:8080"
+    extra_hosts:
+      - "127.0.0.1:host-gateway"
