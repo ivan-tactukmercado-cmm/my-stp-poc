@@ -1,6 +1,16 @@
 # BAMOE STP Orchestration Service
 This module contains an example `BAMOE (Kogito) STP Orchestration Service`, using the using Kogito and packaged as a micro-service JAR. 
 
+# How to deploy to kubernetes
+
+1. Create or select your KAT cluster and then run:
+```shell
+./kubernetes/deploy.sh
+``` 
+
+To deploy a new version, replace 1.0.0-SNAPSHOT in all code occurances (pom.xml, docker-compose.yaml, kubernetes/deploy.sh, src/main/resources/application.properties) with the version you want to deploy and then run `./kubernetes/deploy.sh`
+
+
 # How To Build 
 Once you have configured your local development environment, you need to perform a Maven `build` of the repository.  This repository is built using `mvn clean install` by either the CI/CD pipeline or on a local developer workstation.  If deploying artifacts to an enterprise Maven repository, please use `mvn clean deploy`, which requires configuration of the `distributionManagement` section of your project's parent pom.xml.  This project is also configured to generate container images automatically by utilizing the `docker` or `openshift` profiles, as in the following examples:
 

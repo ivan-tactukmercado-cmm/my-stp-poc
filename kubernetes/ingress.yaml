@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: stp-poc
+  namespace: stp-poc
+spec:
+  rules:
+  - host: stp-poc.engaging-platypus.kat.cmmaz.cloud
+    http:
+      paths:
+      - backend:
+          service:
+            name: stp-poc
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific

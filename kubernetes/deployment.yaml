@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: stp-poc
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      labels:
+        component: web
+    spec:
+      containers:
+      - name: web
+        image: "katscratch.azurecr.io/bamoe/stp-poc:1.0.0-SNAPSHOT"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: web-port
