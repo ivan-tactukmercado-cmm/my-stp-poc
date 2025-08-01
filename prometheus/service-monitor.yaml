@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    app: my-stp-poc
+  name: my-stp-poc-monitor
+  namespace: ibm-ce
+spec:
+  endpoints:
+  - path: /q/metrics
+    targetPort: 8080
+    scheme: http
+  namespaceSelector:
+    matchNames:
+    - ibm-ce
+  selector:
+    matchLabels:
+      app: my-stp-poc
+

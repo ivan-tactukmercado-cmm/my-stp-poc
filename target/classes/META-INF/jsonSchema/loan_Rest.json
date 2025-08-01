@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2019-09/schema","type":"object","properties":{"Result":{"output":true},"Url":{"type":"string","input":true}}}

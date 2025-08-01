@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="https://kie.org/dmn/extensions/1.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_55CBA535-7252-4E37-A674-472EFF00929E" name="DMN_AECB2F1F-A849-44F7-9A49-53EA0E27DB0B" expressionLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="https://kie.org/dmn/_49CA0FB1-9FAA-4672-8A0B-A787EB65E52E">
+  <decision id="_790265D1-583D-4396-A6B6-D1A899358B51" name="InterestRate">
+    <variable id="_0BEDC92A-16F4-48A1-A908-E25284DF4B13" name="InterestRate" typeRef="number"/>
+    <informationRequirement id="_19D79B0E-277F-4000-9DC7-738F1DBE180B">
+      <requiredInput href="#_21051927-2035-468A-B2E3-D4D49C782DEB"/>
+    </informationRequirement>
+    <informationRequirement id="_C6CEFF0C-6C3D-462F-9AA0-D92A576E3DA6">
+      <requiredInput href="#_81455944-D851-4503-A0A7-3D08E173DF0D"/>
+    </informationRequirement>
+  </decision>
+  <inputData id="_21051927-2035-468A-B2E3-D4D49C782DEB" name="Experian">
+    <variable id="_83420356-77C6-4F2E-8FE7-F97BD12622FA" name="Experian" typeRef="number"/>
+  </inputData>
+  <inputData id="_81455944-D851-4503-A0A7-3D08E173DF0D" name="Equfax">
+    <variable id="_ACE9E072-CD6D-44FC-A9C3-487DBEE5CD44" name="Equfax" typeRef="number"/>
+  </inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_B849D300-7A77-4AE2-B542-F83C1177D048" name="Default DRD" useAlternativeInputDataShape="false">
+      <di:extension/>
+      <dmndi:DMNShape id="_061004DE-EABF-474D-8D70-2AD33EDD25CE" dmnElementRef="_21051927-2035-468A-B2E3-D4D49C782DEB" isListedInputData="false" isCollapsed="false">
+        <dc:Bounds x="320" y="80" width="160" height="80"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="_BEC3D5E8-2EF9-4EAB-B3E6-61BD718354CD" dmnElementRef="_81455944-D851-4503-A0A7-3D08E173DF0D" isListedInputData="false" isCollapsed="false">
+        <dc:Bounds x="320" y="240" width="160" height="80"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="_064A3914-71AC-4D24-B193-91574C0389C6" dmnElementRef="_790265D1-583D-4396-A6B6-D1A899358B51" isListedInputData="false" isCollapsed="false">
+        <dc:Bounds x="620" y="160" width="160" height="80"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="_93B7CE71-8086-4921-A92E-2196F889D50D" dmnElementRef="_19D79B0E-277F-4000-9DC7-738F1DBE180B" sourceElement="_061004DE-EABF-474D-8D70-2AD33EDD25CE" targetElement="_064A3914-71AC-4D24-B193-91574C0389C6">
+        <di:waypoint x="400" y="120"/>
+        <di:waypoint x="620" y="200"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="_DDAF7243-0C34-47C4-97E3-EADE4BBE9BC1" dmnElementRef="_C6CEFF0C-6C3D-462F-9AA0-D92A576E3DA6" sourceElement="_BEC3D5E8-2EF9-4EAB-B3E6-61BD718354CD" targetElement="_064A3914-71AC-4D24-B193-91574C0389C6">
+        <di:waypoint x="400" y="280"/>
+        <di:waypoint x="620" y="200"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
