@@ -12,6 +12,20 @@ spec:
     metadata:
       labels:
         component: web
+      annotations:
+        ad.datadoghq.com/web.checks: |
+          {
+            "openmetrics": {
+              "init_config": {},
+              "instances": [
+                {
+                  "openmetrics_endpoint": "http://%%host%%:%%port%%/q/metrics",
+                  "namespace": "bamoe-poc",
+                  "metrics": [".*"]
+                }
+              ]
+            }
+          }  
     spec:
       containers:
       - name: web
