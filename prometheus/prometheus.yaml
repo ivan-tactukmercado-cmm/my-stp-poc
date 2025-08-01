@@ -1,0 +1,15 @@
+
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: prometheus
+  namespace: ibm-ce-prometheus
+spec:
+  replicas: 1
+  serviceAccountName: prometheus-k8s
+  serviceMonitorSelector:
+    matchLabels:
+      app.kubernetes.io/name: my-stp-poc
+  scrapeInterval: 10s
+  evaluationInterval: 10s
+

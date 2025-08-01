@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
+    <!-- <parent>
     <artifactId>bamoe-maven</artifactId>
     <groupId>com.ibm.bamoe.maven</groupId>
     <version>1.0.0</version>
-  </parent>
+  </parent> -->
 
 	<!-- POM -->
 	<groupId>com.ibm.bamoe.myprojects</groupId>
@@ -131,6 +131,12 @@
       		<groupId>org.jbpm</groupId>
       		<artifactId>jbpm-with-drools-quarkus</artifactId>
     	</dependency>
+
+		<!-- Prometheus -->
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-addons-quarkus-monitoring-prometheus</artifactId>
+		</dependency>
 
 		<!-- Testing -->
 		<dependency>
