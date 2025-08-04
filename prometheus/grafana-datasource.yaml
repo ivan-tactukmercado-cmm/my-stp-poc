@@ -1,0 +1,18 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDatasource
+metadata:
+  name: grafana-datasource
+  namespace: ibm-ce-prometheus
+spec:
+  datasource:
+    access: proxy
+    isDefault: true
+    jsonData:
+      timeInterval: 10s
+      tlsSkipVerify: true
+    name: prometheus
+    type: prometheus
+    url: 'http://prometheus-operated.ibm-ce-prometheus.svc:9090'
+  instanceSelector:
+    matchNames:
+    - name: grafana
