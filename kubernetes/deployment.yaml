@@ -17,6 +17,13 @@ spec:
       - name: web
         image: "katscratch.azurecr.io/bamoe/stp-poc:1.0.0-SNAPSHOT"
         imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8080
           name: web-port
